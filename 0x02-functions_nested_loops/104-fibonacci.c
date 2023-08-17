@@ -36,7 +36,7 @@ int main(void)
 		while (f1o > 0 && initial0s > 0)
 		{
 			printf("%i", 0);
-			intial0s--;
+			initial0s--;
 		}
 		printf("%lu", f1);
 		tmp = (f1 + f2) % mx;

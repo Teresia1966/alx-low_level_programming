@@ -1,30 +1,31 @@
 #include "main.h"
-#include <stdio.h>
+
+int actual_prime(int n, int i);
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * is_prime_number - says the prime number in intergers
+ * @n: number to evaluate
+ * Return: 1 if the input integer is a prime number, otherwise return 0
  */
-int main(void)
+int is_prime_number(int n)
 {
-    int r;
-
-    r = is_prime_number(1);
-    printf("%d\n", r);
-    r = is_prime_number(1024);
-    printf("%d\n", r);
-    r = is_prime_number(16);
-    printf("%d\n", r);
-    r = is_prime_number(17);
-    printf("%d\n", r);
-    r = is_prime_number(25);
-    printf("%d\n", r);
-    r = is_prime_number(-1);
-    printf("%d\n", r);
-    r = is_prime_number(113);
-    printf("%d\n", r);
-    r = is_prime_number(7919);
-    printf("%d\n", r);
-    return (0);
+	if (n <= 1)
+		return (0);
+	return (actual_prime(n, n - 1));
 }
+
+/**
+ * actual_prime - calculates if a number is prime
+ * @i: iterator
+ * @n: number to evaluate
+ * Return: 1 if the input integer is a prime number, otherwise return 0
+ */
+int actual_prime(int n, int i)
+{
+	if (i == 1)
+		return (1);
+	if (n % i == 0 && i > 0)
+		return (0);
+	return (actual_prime(n, i - 1));
+}
+

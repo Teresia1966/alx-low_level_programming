@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 int _sqrt(int n, int i);
 
 /**
@@ -23,7 +23,7 @@ int _sqrt(int n, int i)
 	int sqrt = i * i;
 
 	if (sqrt == n)
-		return (1);
+		return (i);
 	if (sqrt > n)
 		return (-1);
 	return (_sqrt(n, i + 1));

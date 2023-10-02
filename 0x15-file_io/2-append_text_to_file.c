@@ -6,7 +6,8 @@
  * @text_content: string to add to the end of the file.
  * Return: 1 on success and -1 on failure
  *         -1 if filename is NULL
- *         1 if the file exists and -1 if the file does not exist or if you do not have the required permissions to write the file
+ *         1 if the file exists and -1 if the file does not exist 
+ *         or if you do not have the required permissions to write the file
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
